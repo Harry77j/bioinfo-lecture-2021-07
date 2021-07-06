@@ -100,14 +100,18 @@ while n > 0:
     val *= n
     n -= 1
 print(val)
-
+"""
+"""
 i = 1
+w = 1
 while i < 6:
-    print((i+1)*i)
-
+    w *= i
+    i += 1
+print(w)
 """
 
 #009. 함수 p86
+"""
 def greet():
     print("Hello, Bioinformatics")
 
@@ -123,7 +127,7 @@ print(ret1)
 
 ret2 = greet2(3)
 print(ret2)
-
+"""
 
 
 
