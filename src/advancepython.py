@@ -100,8 +100,7 @@ while n > 0:
     val *= n
     n -= 1
 print(val)
-"""
-"""
+
 i = 1
 w = 1
 while i < 6:
@@ -128,6 +127,8 @@ print(ret1)
 ret2 = greet2(3)
 print(ret2)
 """
+
+#010. 함수 - 함수에 값 전달
 
 
 
