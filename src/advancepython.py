@@ -461,6 +461,34 @@ with gzip.open(file_name, 'rt') as handle:
             data[base] += 1
 print(data)
 """
+# 모델 답 - Biopython으로 풀이 (txt 파일)
+"""
+from Bio import SeqIO
+
+f = "./covid19.fasta"
+
+record = SeqIO.read(f, "fasta")
+
+print(f"A: {record.seq.count ('A')}")
+print(f"C: {record.seq.count ('C')}")
+print(f"G: {record.seq.count ('G')}")
+print(f"T: {record.seq.count ('T')}")
+"""
+# 모델 답 - Biopython으로 풀이 (gzip 파일)
+"""
+import gzip
+from Bio import SeqIO
+
+f = "./covid19.fasta.gz"
+
+with gzip.open(f, "rt") as handle:
+    record = SeqIO.read(handle, "fasta")
+
+print(f"A: {record.seq.count ('A')}")
+print(f"C: {record.seq.count ('C')}")
+print(f"G: {record.seq.count ('G')}")
+print(f"T: {record.seq.count ('T')}")
+"""
 
 #025. 문자열 n씩 건너뛰며 출력하기***
 """
@@ -518,8 +546,10 @@ for i in range(len(seq)):
     print(f"{s}{bond}{cs}")
 """
 #029. 특정 문자 확인하기
+"""
 Seq1 = "ATGTTATAG"
 print("C" in Seq1)
+"""
 
 #030. 문자열 index 번호 출력하기 <- 마크로젠 코딩테스트 문제
 """
@@ -556,6 +586,7 @@ print(min(data))
 print(max(data)) 
 """
 #035. 리스트의 요소값을 사전으로 세기
+"""
 l_data = [3, 1, 1, 2, 0, 0, 2, 3, 3]
 d_data = {}
 for i in l_data:
@@ -563,7 +594,7 @@ for i in l_data:
         d_data[i] = 0
     d_data[i] += 1
 print(d_data)
- 
+""" 
 
 
 
